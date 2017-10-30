@@ -24,4 +24,10 @@ public class UserInfoController {
 	public String listUser() {
 		return userInfoService.listUser();
 	}
+	
+	@RequestMapping("/test")
+	@ResponseBody
+	public String test() {
+		return userInfoService.test();
+	}
 }

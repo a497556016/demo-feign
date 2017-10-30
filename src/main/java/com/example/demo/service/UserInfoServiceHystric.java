@@ -17,4 +17,10 @@ public class UserInfoServiceHystric implements UserInfoService {
 		return "sorry,it is failed!";
 	}
 
+	@Override
+	public String test() {
+		// TODO Auto-generated method stub
+		return "sorry,it is failed!";
+	}
+
 }

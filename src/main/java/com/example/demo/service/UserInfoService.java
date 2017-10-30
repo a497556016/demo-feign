@@ -4,7 +4,7 @@ import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(value="demo-service",fallback=UserInfoServiceHystric.class)
+@FeignClient(name="demo-service",fallback=UserInfoServiceHystric.class)
 public interface UserInfoService {
 	
 	@RequestMapping(value="userInfo/findById")
@@ -12,4 +12,7 @@ public interface UserInfoService {
 	
 	@RequestMapping("userInfo/listUser")
 	public String listUser();
+
+	@RequestMapping("userInfo/test")
+	public String test();
 }
